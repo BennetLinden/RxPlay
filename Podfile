@@ -5,9 +5,10 @@ target 'RxPlay' do
   use_frameworks!
 
     pod 'SwiftLint'
-    pod 'ReSwift'
     pod 'RxSwift'
+    pod 'RxCocoa'
     pod 'Alamofire'
+    pod 'RxAlamofire'
     pod 'PromiseKit'
     pod 'SnapKit', '~> 4.0'
     pod 'Reusable', '~> 4.0'

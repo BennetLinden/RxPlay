@@ -10,7 +10,11 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol DependencyProvider {
+protocol DependencyProvider: TrendingListViewControllerFactory, LoadTrendingListUseCaseFactory {
 
+    var giphyRepository: GiphyRepository { get }
 
+    func makeTrendingListViewController() -> UIViewController
+    func makeTrendingListPresenter() -> TrendingListPresenter
+    func makeLoadTrendingListUseCase() -> UseCase
 }

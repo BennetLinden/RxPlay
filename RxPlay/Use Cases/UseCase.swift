@@ -7,7 +7,9 @@
 //
 
 import Foundation
+import PromiseKit
+import RxSwift
 
 protocol UseCase {
-    func start()
+    func start() -> Completable
 }

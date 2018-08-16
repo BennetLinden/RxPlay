@@ -12,5 +12,20 @@ import RxSwift
 
 final class DependencyContainer: DependencyProvider {
 
-    
+    let giphyRepository: GiphyRepository = GiphyRepository()
+    let giphyAPI = GiphyAPI()
+
+    func makeTrendingListViewController() -> UIViewController {
+        return TrendingListViewController(presenter: makeTrendingListPresenter())
+    }
+
+    func makeTrendingListPresenter() -> TrendingListPresenter {
+        return TrendingListPresenter(trendingListObservable: giphyRepository.trending,
+                                     loadTrendingListUseCaseFactory: self)
+    }
+
+    func makeLoadTrendingListUseCase() -> UseCase {
+        return LoadTrendingListUseCase(giphyRepository: giphyRepository,
+                                       remoteAPI: giphyAPI)
+    }
 }

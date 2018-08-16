@@ -10,22 +10,29 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.3.4):
     - PromiseKit/CorePromise
-  - ReSwift (4.0.1)
   - Reusable (4.0.2):
     - Reusable/Storyboard (= 4.0.2)
     - Reusable/View (= 4.0.2)
   - Reusable/Storyboard (4.0.2)
   - Reusable/View (4.0.2)
+  - RxAlamofire (4.2.0):
+    - RxAlamofire/Core (= 4.2.0)
+  - RxAlamofire/Core (4.2.0):
+    - Alamofire (~> 4.5)
+    - RxSwift (~> 4)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.2.0)
   - SnapKit (4.0.0)
-  - SwiftLint (0.26.0)
+  - SwiftLint (0.27.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher (~> 4.8)
   - PromiseKit
-  - ReSwift
   - Reusable (~> 4.0)
+  - RxAlamofire
+  - RxCocoa
   - RxSwift
   - SnapKit (~> 4.0)
   - SwiftLint
@@ -35,8 +42,9 @@ SPEC REPOS:
     - Alamofire
     - Kingfisher
     - PromiseKit
-    - ReSwift
     - Reusable
+    - RxAlamofire
+    - RxCocoa
     - RxSwift
     - SnapKit
     - SwiftLint
@@ -45,12 +53,13 @@ SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
   PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
-  ReSwift: f4012c613e13da7398827fe5aebdb938eaed40a3
   Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
+  RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SwiftLint: f6b83e8d95ee1e91e11932d843af4fdcbf3fc764
+  SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
 
-PODFILE CHECKSUM: 92b166dae65916a796faf01f1cf040cba03fa6c3
+PODFILE CHECKSUM: eafb0fee0c7d91039284808a6c48c9cb89870538
 
 COCOAPODS: 1.5.3

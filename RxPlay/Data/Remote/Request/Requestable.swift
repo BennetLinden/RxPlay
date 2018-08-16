@@ -14,7 +14,7 @@ protocol Requestable: URLRequestConvertible {
     var method: Alamofire.HTTPMethod { get }
     var endpoint: URL { get }
     var parameters: [String: Any]? { get }
-
+    var headers: [String: String]? { get }
 }
 
 extension Requestable {
@@ -30,6 +30,7 @@ extension Requestable {
         let request: URLRequest = {
             var request = URLRequest(url: endpoint)
             request.httpMethod = method.rawValue
+            request.allHTTPHeaderFields = headers
             return request
         }()
         return try encoding.encode(request, with: parameters)

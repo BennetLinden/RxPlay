@@ -7,24 +7,8 @@
 //
 
 import Foundation
-import PromiseKit
-import Alamofire
+import RxSwift
 
-class RemoteAPI {
-
-    func request(_ route: Requestable) -> Promise<Data> {
-        return Promise { seal in
-            Alamofire.request(route)
-                .validate()
-                .responseData { response in
-                    switch response.result {
-                    case .success(let data):
-                        seal.fulfill(data)
-
-                    case .failure(let error):
-                        seal.reject(error)
-                    }
-            }
-        }
-    }
+protocol RemoteAPI {
+    func request<T: Decodable>(_ route: Route) -> Single<T>
 }

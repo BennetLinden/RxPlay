@@ -9,15 +9,15 @@
 import Foundation
 import Alamofire
 
-struct Route: Requestable {
+struct Route {
 
     let method: HTTPMethod
-    let endpoint: URL
+    let path: String
     let parameters: [String: Any]?
 
-    init(_ method: HTTPMethod, _ endpoint: URL, with params: [String: Any]? = nil) {
+    init(_ method: HTTPMethod, _ path: String, with params: [String: Any]? = nil) {
         self.method = method
-        self.endpoint = endpoint
+        self.path = path
         self.parameters = params
     }
 }
