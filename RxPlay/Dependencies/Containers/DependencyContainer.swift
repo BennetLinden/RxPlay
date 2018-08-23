@@ -12,20 +12,35 @@ import RxSwift
 
 final class DependencyContainer: DependencyProvider {
 
-    let giphyRepository: GiphyRepository = GiphyRepository()
-    let giphyAPI = GiphyAPI()
+    let giphyRepository: GiphyRepository = GiphyRepository(remoteAPI: GiphyAPI())
+
+    func makeTabBarController() -> UITabBarController {
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [
+            makeTrendingListViewController(),
+            makeSearchViewController()
+        ]
+        return tabBarController
+    }
 
     func makeTrendingListViewController() -> UIViewController {
-        return TrendingListViewController(presenter: makeTrendingListPresenter())
+        let trendingListViewController = TrendingListViewController(viewModelFactory: self)
+        return UINavigationController(rootViewController: trendingListViewController)
     }
 
-    func makeTrendingListPresenter() -> TrendingListPresenter {
-        return TrendingListPresenter(trendingListObservable: giphyRepository.trending,
-                                     loadTrendingListUseCaseFactory: self)
+    func makeTrendingListViewModel() -> TrendingListViewModel {
+        return TrendingListViewModel(loadTrendingListUseCase: giphyRepository)
     }
 
-    func makeLoadTrendingListUseCase() -> UseCase {
-        return LoadTrendingListUseCase(giphyRepository: giphyRepository,
-                                       remoteAPI: giphyAPI)
+    func makeSearchViewController() -> UIViewController {
+        let searchViewController = SearchViewController(viewModelFactory: self)
+        return UINavigationController(rootViewController: searchViewController)
+    }
+
+    func makeSearchViewModel(searchTextObservable: Observable<String>,
+                             searchButtonObservable: Observable<Void>) -> SearchViewModel {
+        return SearchViewModel(searchTextObservable: searchTextObservable,
+                               searchButtonObservable: searchButtonObservable,
+                               searchUseCase: giphyRepository)
     }
 }

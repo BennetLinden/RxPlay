@@ -25,6 +25,7 @@ PODS:
   - RxSwift (4.2.0)
   - SnapKit (4.0.0)
   - SwiftLint (0.27.0)
+  - SwiftyGif (4.1.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -36,6 +37,7 @@ DEPENDENCIES:
   - RxSwift
   - SnapKit (~> 4.0)
   - SwiftLint
+  - SwiftyGif
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - RxSwift
     - SnapKit
     - SwiftLint
+    - SwiftyGif
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -59,7 +62,8 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
+  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
 
-PODFILE CHECKSUM: eafb0fee0c7d91039284808a6c48c9cb89870538
+PODFILE CHECKSUM: 903dcdb028e46b033700f9003f6a8d6240a92d6c
 
 COCOAPODS: 1.5.3

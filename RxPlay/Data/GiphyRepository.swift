@@ -11,5 +11,28 @@ import RxSwift
 
 final class GiphyRepository {
 
-    let trending: BehaviorSubject<[GIF]> = BehaviorSubject(value: [])
+    private let remoteAPI: RemoteAPI
+
+    init(remoteAPI: RemoteAPI) {
+        self.remoteAPI = remoteAPI
+    }
+}
+
+extension GiphyRepository: LoadTrendingListUseCase {
+
+    func loadTrendingList() -> Observable<[GIF]> {
+        let requestObservable: Single<GIFListResponse> =
+            remoteAPI.request(Route(.get, "v1/gifs/trending"))
+        return requestObservable.map({ $0.data }).asObservable()
+    }
+}
+
+extension GiphyRepository: SearchUseCase {
+
+    func search(query: String) -> Observable<[GIF]> {
+        let params: [String: Any] = ["q": query]
+        let requestObservable: Single<GIFListResponse> =
+            remoteAPI.request(Route(.get, "v1/gifs/search", with: params))
+        return requestObservable.map({ $0.data }).asObservable()
+    }
 }

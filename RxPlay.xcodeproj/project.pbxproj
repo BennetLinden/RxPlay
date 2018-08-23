@@ -15,25 +15,34 @@
 		5517B2312122056F00BB150B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5517B22E2122056F00BB150B /* LaunchScreen.storyboard */; };
 		5517B25A212205E500BB150B /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B241212205E500BB150B /* DependencyContainer.swift */; };
 		5517B25F212205E500BB150B /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B249212205E500BB150B /* DependencyProvider.swift */; };
-		5517B297212205ED00BB150B /* UseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B267212205ED00BB150B /* UseCase.swift */; };
 		5517B299212205ED00BB150B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B26A212205ED00BB150B /* UIColor+Extensions.swift */; };
 		5517B29B212205ED00BB150B /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B26C212205ED00BB150B /* UserDefaults+Extensions.swift */; };
 		5517B2A4212205ED00BB150B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B27B212205ED00BB150B /* View.swift */; };
 		5517B2A5212205ED00BB150B /* LoaderViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B27C212205ED00BB150B /* LoaderViewable.swift */; };
 		5517B2A6212205ED00BB150B /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B27D212205ED00BB150B /* Presenter.swift */; };
 		5517B2A7212205ED00BB150B /* DismissableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B27E212205ED00BB150B /* DismissableView.swift */; };
-		5517B2B92122112600BB150B /* TrendingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2B52122112600BB150B /* TrendingListPresenter.swift */; };
+		5517B2B92122112600BB150B /* TrendingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2B52122112600BB150B /* TrendingListViewModel.swift */; };
 		5517B2BA2122112600BB150B /* TrendingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2B62122112600BB150B /* TrendingListViewController.swift */; };
-		5517B2BB2122112600BB150B /* TrendingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2B72122112600BB150B /* TrendingListView.swift */; };
 		5517B2BC2122112600BB150B /* TrendingListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5517B2B82122112600BB150B /* TrendingListViewController.xib */; };
 		5517B2BF212211EC00BB150B /* TrendingListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2BE212211EC00BB150B /* TrendingListViewControllerFactory.swift */; };
 		5517B2C2212219B700BB150B /* GiphyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2C1212219B700BB150B /* GiphyRepository.swift */; };
 		5517B2C4212219EB00BB150B /* GIF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2C3212219EB00BB150B /* GIF.swift */; };
 		5517B2C621221A8600BB150B /* LoadTrendingListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2C521221A8600BB150B /* LoadTrendingListUseCase.swift */; };
-		5517B2C821221ACD00BB150B /* LoadTrendingListUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5517B2C721221ACD00BB150B /* LoadTrendingListUseCaseFactory.swift */; };
 		556655FB212569CA008D162E /* GiphyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556655FA212569CA008D162E /* GiphyAPI.swift */; };
 		556655FF21257BD4008D162E /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556655FE21257BD4008D162E /* RequestBuilder.swift */; };
 		556656012125966E008D162E /* GIFListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556656002125966E008D162E /* GIFListResponse.swift */; };
+		556656072125BC02008D162E /* GIFPreviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556656052125BC02008D162E /* GIFPreviewTableViewCell.swift */; };
+		556656082125BC02008D162E /* GIFPreviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556656062125BC02008D162E /* GIFPreviewTableViewCell.xib */; };
+		5566560A2125C0B4008D162E /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556656092125C0B4008D162E /* Media.swift */; };
+		5566560C2125C0FC008D162E /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566560B2125C0FC008D162E /* Images.swift */; };
+		5566560E2126C0CA008D162E /* TabBarControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566560D2126C0CA008D162E /* TabBarControllerFactory.swift */; };
+		556656172126F43E008D162E /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556656132126F43E008D162E /* SearchViewModel.swift */; };
+		556656182126F43E008D162E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556656142126F43E008D162E /* SearchViewController.swift */; };
+		5566561A2126F43E008D162E /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556656162126F43E008D162E /* SearchViewController.xib */; };
+		5566561D2126F45A008D162E /* SearchViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566561C2126F45A008D162E /* SearchViewControllerFactory.swift */; };
+		5566561F21271AB4008D162E /* SearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5566561E21271AB4008D162E /* SearchUseCase.swift */; };
+		55665624212B44DA008D162E /* SearchViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55665623212B44DA008D162E /* SearchViewModelFactory.swift */; };
+		55665626212B5DF9008D162E /* TrendingListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55665625212B5DF9008D162E /* TrendingListViewModelFactory.swift */; };
 		6919E673922A4EC311BF1A5A /* Pods_RxPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F6AC5DECD583781BD8B1E0A /* Pods_RxPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,25 +60,34 @@
 		5517B22F2122056F00BB150B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5517B241212205E500BB150B /* DependencyContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		5517B249212205E500BB150B /* DependencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
-		5517B267212205ED00BB150B /* UseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCase.swift; sourceTree = "<group>"; };
 		5517B26A212205ED00BB150B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		5517B26C212205ED00BB150B /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
 		5517B27B212205ED00BB150B /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		5517B27C212205ED00BB150B /* LoaderViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoaderViewable.swift; sourceTree = "<group>"; };
 		5517B27D212205ED00BB150B /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		5517B27E212205ED00BB150B /* DismissableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissableView.swift; sourceTree = "<group>"; };
-		5517B2B52122112600BB150B /* TrendingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendingListPresenter.swift; path = Trending/TrendingListPresenter.swift; sourceTree = "<group>"; };
+		5517B2B52122112600BB150B /* TrendingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListViewModel.swift; sourceTree = "<group>"; };
 		5517B2B62122112600BB150B /* TrendingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListViewController.swift; sourceTree = "<group>"; };
-		5517B2B72122112600BB150B /* TrendingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrendingListView.swift; path = Trending/TrendingListView.swift; sourceTree = "<group>"; };
 		5517B2B82122112600BB150B /* TrendingListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingListViewController.xib; sourceTree = "<group>"; };
 		5517B2BE212211EC00BB150B /* TrendingListViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListViewControllerFactory.swift; sourceTree = "<group>"; };
 		5517B2C1212219B700BB150B /* GiphyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyRepository.swift; sourceTree = "<group>"; };
 		5517B2C3212219EB00BB150B /* GIF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIF.swift; sourceTree = "<group>"; };
 		5517B2C521221A8600BB150B /* LoadTrendingListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTrendingListUseCase.swift; sourceTree = "<group>"; };
-		5517B2C721221ACD00BB150B /* LoadTrendingListUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadTrendingListUseCaseFactory.swift; sourceTree = "<group>"; };
 		556655FA212569CA008D162E /* GiphyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphyAPI.swift; sourceTree = "<group>"; };
 		556655FE21257BD4008D162E /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		556656002125966E008D162E /* GIFListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFListResponse.swift; sourceTree = "<group>"; };
+		556656052125BC02008D162E /* GIFPreviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFPreviewTableViewCell.swift; sourceTree = "<group>"; };
+		556656062125BC02008D162E /* GIFPreviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GIFPreviewTableViewCell.xib; sourceTree = "<group>"; };
+		556656092125C0B4008D162E /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		5566560B2125C0FC008D162E /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		5566560D2126C0CA008D162E /* TabBarControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerFactory.swift; sourceTree = "<group>"; };
+		556656132126F43E008D162E /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		556656142126F43E008D162E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		556656162126F43E008D162E /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		5566561C2126F45A008D162E /* SearchViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerFactory.swift; sourceTree = "<group>"; };
+		5566561E21271AB4008D162E /* SearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchUseCase.swift; sourceTree = "<group>"; };
+		55665623212B44DA008D162E /* SearchViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModelFactory.swift; sourceTree = "<group>"; };
+		55665625212B5DF9008D162E /* TrendingListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingListViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +141,7 @@
 				5517B232212205E500BB150B /* Dependencies */,
 				5517B262212205ED00BB150B /* Use Cases */,
 				5517B26D212205ED00BB150B /* Views */,
+				556656032125BBCD008D162E /* Components */,
 			);
 			path = RxPlay;
 			sourceTree = "<group>";
@@ -141,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				5517B2C3212219EB00BB150B /* GIF.swift */,
+				556656092125C0B4008D162E /* Media.swift */,
+				5566560B2125C0FC008D162E /* Images.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,24 +198,18 @@
 			isa = PBXGroup;
 			children = (
 				5517B240212205E500BB150B /* Containers */,
-				5517B233212205E500BB150B /* Use Case Factories */,
+				55665622212B44C2008D162E /* View Mode Factories */,
 				5517B239212205E500BB150B /* View Controller Factories */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
 		};
-		5517B233212205E500BB150B /* Use Case Factories */ = {
-			isa = PBXGroup;
-			children = (
-				5517B2C721221ACD00BB150B /* LoadTrendingListUseCaseFactory.swift */,
-			);
-			path = "Use Case Factories";
-			sourceTree = "<group>";
-		};
 		5517B239212205E500BB150B /* View Controller Factories */ = {
 			isa = PBXGroup;
 			children = (
+				5566560D2126C0CA008D162E /* TabBarControllerFactory.swift */,
 				5517B2BE212211EC00BB150B /* TrendingListViewControllerFactory.swift */,
+				5566561C2126F45A008D162E /* SearchViewControllerFactory.swift */,
 			);
 			path = "View Controller Factories";
 			sourceTree = "<group>";
@@ -211,8 +226,8 @@
 		5517B262212205ED00BB150B /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
-				5517B267212205ED00BB150B /* UseCase.swift */,
 				5517B2C521221A8600BB150B /* LoadTrendingListUseCase.swift */,
+				5566561E21271AB4008D162E /* SearchUseCase.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -229,9 +244,8 @@
 		5517B26D212205ED00BB150B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5517B2B52122112600BB150B /* TrendingListPresenter.swift */,
-				5517B2B72122112600BB150B /* TrendingListView.swift */,
-				5517B2BD2122113000BB150B /* ViewController */,
+				556656122126F42D008D162E /* Search */,
+				5566560F2126D2E7008D162E /* TrendingList */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -271,6 +285,59 @@
 				5517B21C2122055C00BB150B /* Requestable.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		556656032125BBCD008D162E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				556656042125BBDC008D162E /* Cells */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		556656042125BBDC008D162E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				556656052125BC02008D162E /* GIFPreviewTableViewCell.swift */,
+				556656062125BC02008D162E /* GIFPreviewTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5566560F2126D2E7008D162E /* TrendingList */ = {
+			isa = PBXGroup;
+			children = (
+				5517B2B52122112600BB150B /* TrendingListViewModel.swift */,
+				5517B2BD2122113000BB150B /* ViewController */,
+			);
+			path = TrendingList;
+			sourceTree = "<group>";
+		};
+		556656122126F42D008D162E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				556656132126F43E008D162E /* SearchViewModel.swift */,
+				5566561B2126F444008D162E /* ViewController */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5566561B2126F444008D162E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				556656142126F43E008D162E /* SearchViewController.swift */,
+				556656162126F43E008D162E /* SearchViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		55665622212B44C2008D162E /* View Mode Factories */ = {
+			isa = PBXGroup;
+			children = (
+				55665623212B44DA008D162E /* SearchViewModelFactory.swift */,
+				55665625212B5DF9008D162E /* TrendingListViewModelFactory.swift */,
+			);
+			path = "View Mode Factories";
 			sourceTree = "<group>";
 		};
 		C50817A553A40866299EB8B5 /* Pods */ = {
@@ -346,6 +413,8 @@
 				5517B2BC2122112600BB150B /* TrendingListViewController.xib in Resources */,
 				5517B2312122056F00BB150B /* LaunchScreen.storyboard in Resources */,
 				5517B20C212204DD00BB150B /* Assets.xcassets in Resources */,
+				5566561A2126F43E008D162E /* SearchViewController.xib in Resources */,
+				556656082125BC02008D162E /* GIFPreviewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +468,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -410,6 +480,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -423,30 +494,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				556656182126F43E008D162E /* SearchViewController.swift in Sources */,
+				556656172126F43E008D162E /* SearchViewModel.swift in Sources */,
+				5566560E2126C0CA008D162E /* TabBarControllerFactory.swift in Sources */,
 				5517B2BA2122112600BB150B /* TrendingListViewController.swift in Sources */,
 				5517B2A5212205ED00BB150B /* LoaderViewable.swift in Sources */,
 				5517B299212205ED00BB150B /* UIColor+Extensions.swift in Sources */,
 				556655FF21257BD4008D162E /* RequestBuilder.swift in Sources */,
-				5517B2BB2122112600BB150B /* TrendingListView.swift in Sources */,
+				5566560C2125C0FC008D162E /* Images.swift in Sources */,
+				5566561F21271AB4008D162E /* SearchUseCase.swift in Sources */,
+				55665624212B44DA008D162E /* SearchViewModelFactory.swift in Sources */,
 				5517B2C621221A8600BB150B /* LoadTrendingListUseCase.swift in Sources */,
 				5517B2C4212219EB00BB150B /* GIF.swift in Sources */,
 				5517B2A7212205ED00BB150B /* DismissableView.swift in Sources */,
 				5517B2C2212219B700BB150B /* GiphyRepository.swift in Sources */,
 				556655FB212569CA008D162E /* GiphyAPI.swift in Sources */,
+				5566560A2125C0B4008D162E /* Media.swift in Sources */,
 				556656012125966E008D162E /* GIFListResponse.swift in Sources */,
+				55665626212B5DF9008D162E /* TrendingListViewModelFactory.swift in Sources */,
 				5517B2BF212211EC00BB150B /* TrendingListViewControllerFactory.swift in Sources */,
-				5517B297212205ED00BB150B /* UseCase.swift in Sources */,
 				5517B22B2122055C00BB150B /* Route.swift in Sources */,
+				5566561D2126F45A008D162E /* SearchViewControllerFactory.swift in Sources */,
 				5517B25F212205E500BB150B /* DependencyProvider.swift in Sources */,
 				5517B2262122055C00BB150B /* Requestable.swift in Sources */,
 				5517B29B212205ED00BB150B /* UserDefaults+Extensions.swift in Sources */,
+				556656072125BC02008D162E /* GIFPreviewTableViewCell.swift in Sources */,
 				5517B205212204DC00BB150B /* AppDelegate.swift in Sources */,
 				5517B2A4212205ED00BB150B /* View.swift in Sources */,
 				5517B25A212205E500BB150B /* DependencyContainer.swift in Sources */,
-				5517B2B92122112600BB150B /* TrendingListPresenter.swift in Sources */,
+				5517B2B92122112600BB150B /* TrendingListViewModel.swift in Sources */,
 				5517B2A6212205ED00BB150B /* Presenter.swift in Sources */,
 				5517B2252122055C00BB150B /* RemoteAPI.swift in Sources */,
-				5517B2C821221ACD00BB150B /* LoadTrendingListUseCaseFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

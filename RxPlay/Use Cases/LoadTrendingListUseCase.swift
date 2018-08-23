@@ -8,27 +8,7 @@
 
 import Foundation
 import RxSwift
-import RxAlamofire
 
-class LoadTrendingListUseCase: UseCase {
-
-    let giphyRepository: GiphyRepository
-    let remoteAPI: RemoteAPI
-
-    init(giphyRepository: GiphyRepository,
-         remoteAPI: RemoteAPI) {
-        self.giphyRepository = giphyRepository
-        self.remoteAPI = remoteAPI
-    }
-
-    func start() -> Completable {
-        let requestObservable: Single<GIFListResponse> =
-                remoteAPI.request(Route(.get, "v1/gifs/trending"))
-        return requestObservable
-            .do(onSuccess: {
-                let newTrending = try self.giphyRepository.trending.value() + $0.data
-                self.giphyRepository.trending.onNext(newTrending)
-            })
-            .asCompletable()
-    }
+protocol LoadTrendingListUseCase {
+    func loadTrendingList() -> Observable<[GIF]>
 }

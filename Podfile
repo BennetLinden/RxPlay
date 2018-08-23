@@ -13,5 +13,6 @@ target 'RxPlay' do
     pod 'SnapKit', '~> 4.0'
     pod 'Reusable', '~> 4.0'
     pod 'Kingfisher', '~> 4.8'
+    pod 'SwiftyGif'
 
 end

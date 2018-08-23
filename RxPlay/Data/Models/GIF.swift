@@ -15,4 +15,7 @@ struct GIF: Codable, Equatable {
     let url: URL
     let username: String
     let rating: String
+
+    let images: Images
+
 }

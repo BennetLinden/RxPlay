@@ -11,6 +11,7 @@ import RxSwift
 import RxAlamofire
 import Alamofire
 
+
 class GiphyAPI: RemoteAPI {
 
     private let host: URL = URL(string: "https://api.giphy.com/")!
@@ -36,4 +37,6 @@ class GiphyAPI: RemoteAPI {
             .map({ try self.decoder.decode(T.self, from: $0.1) })
             .asSingle()
     }
+    
+    
 }

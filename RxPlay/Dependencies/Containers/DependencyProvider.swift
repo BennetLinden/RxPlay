@@ -10,11 +10,18 @@ import Foundation
 import UIKit
 import RxSwift
 
-protocol DependencyProvider: TrendingListViewControllerFactory, LoadTrendingListUseCaseFactory {
+protocol DependencyProvider: TabBarControllerFactory,
+    TrendingListViewControllerFactory, TrendingListViewModelFactory,
+    SearchViewControllerFactory, SearchViewModelFactory {
 
     var giphyRepository: GiphyRepository { get }
 
+    func makeTabBarController() -> UITabBarController
+
     func makeTrendingListViewController() -> UIViewController
-    func makeTrendingListPresenter() -> TrendingListPresenter
-    func makeLoadTrendingListUseCase() -> UseCase
+    func makeTrendingListViewModel() -> TrendingListViewModel
+
+    func makeSearchViewController() -> UIViewController
+    func makeSearchViewModel(searchTextObservable: Observable<String>,
+                             searchButtonObservable: Observable<Void>) -> SearchViewModel
 }
