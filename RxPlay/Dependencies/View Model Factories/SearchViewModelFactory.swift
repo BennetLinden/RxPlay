@@ -11,5 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol SearchViewModelFactory {
-    func makeSearchViewModel(searchButtonPressed: Driver<Void>) -> SearchViewModel
+    func makeSearchViewModel(searchText: Driver<String>,
+                             searchButtonPressed: Signal<Void>) -> SearchViewModel
 }

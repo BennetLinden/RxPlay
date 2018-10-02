@@ -10,13 +10,13 @@
 import UIKit
 import SwiftyGif
 import RxSwift
+import RxCocoa
 
 final class TrendingListViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
 
     @IBOutlet private var tableView: UITableView!
-    private var trending: [GIF] = []
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -37,31 +37,25 @@ final class TrendingListViewController: UIViewController {
         tableView.register(cellType: GIFPreviewTableViewCell.self)
         tableView.estimatedRowHeight = 320
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.dataSource = self
 
-        viewModel.trendingList
-            .subscribe(onNext: {
-                self.trending = $0
-                self.tableView.reloadData()
+        viewModel.onError
+            .subscribe(onNext: { (error) in
+                let alertController = UIAlertController(title: "ERROR!", message: error.localizedDescription, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Close", style: .default))
+                self.present(alertController, animated: true)
             })
             .disposed(by: disposeBag)
-    }
-}
 
-extension TrendingListViewController: UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return trending.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(for: indexPath, cellType: GIFPreviewTableViewCell.self)
-        let gif = trending[indexPath.row]
-        if let url = URL(string: gif.images.downsized.url) {
-            cell.previewImageView.setGifFromURL(url)
-        }
-        cell.usernameLabel.text = gif.username
-        cell.ratingLabel.text = String(format: "Rating: %@", gif.rating)
-        return cell
+        viewModel.trendingList
+            .drive(tableView.rx.items) { (tableView, row, gif) in
+                let cell = tableView.dequeueReusableCell(for: IndexPath(row: row, section: 0), cellType: GIFPreviewTableViewCell.self)
+                if let url = URL(string: gif.images.downsized.url) {
+                    cell.previewImageView.setGifFromURL(url)
+                }
+                cell.usernameLabel.text = gif.username
+                cell.ratingLabel.text = String(format: "Rating: %@", gif.rating)
+                return cell
+            }
+            .disposed(by: disposeBag)
     }
 }

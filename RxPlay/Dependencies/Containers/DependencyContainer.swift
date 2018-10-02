@@ -34,11 +34,14 @@ final class DependencyContainer: DependencyProvider {
     }
 
     func makeSearchViewController() -> UIViewController {
-        let searchViewController = SearchViewController(viewModel: makeSearchViewModel())
+        let searchViewController = SearchViewController(viewModelFactory: self)
         return UINavigationController(rootViewController: searchViewController)
     }
 
-    func makeSearchViewModel() -> SearchViewModel {
-        return SearchViewModel(searchUseCase: giphyRepository)
+    func makeSearchViewModel(searchText: Driver<String>,
+                             searchButtonPressed: Signal<Void>) -> SearchViewModel {
+        return SearchViewModel(searchText: searchText,
+                               searchButtonPressed: searchButtonPressed,
+                               searchUseCase: giphyRepository)
     }
 }

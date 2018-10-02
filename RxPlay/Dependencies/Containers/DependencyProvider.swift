@@ -13,7 +13,7 @@ import RxCocoa
 
 protocol DependencyProvider: TabBarControllerFactory,
     TrendingListViewControllerFactory, TrendingListViewModelFactory,
-    SearchViewControllerFactory {
+    SearchViewControllerFactory, SearchViewModelFactory {
 
     var giphyRepository: GiphyRepository { get }
 
@@ -23,5 +23,6 @@ protocol DependencyProvider: TabBarControllerFactory,
     func makeTrendingListViewModel() -> TrendingListViewModel
 
     func makeSearchViewController() -> UIViewController
-    func makeSearchViewModel() -> SearchViewModel
+    func makeSearchViewModel(searchText: Driver<String>,
+                             searchButtonPressed: Signal<Void>) -> SearchViewModel
 }

@@ -29,8 +29,11 @@ final class SearchViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(viewModel: SearchViewModel) {
-        self.viewModel = viewModel
+    init(viewModelFactory: SearchViewModelFactory) {
+        viewModel = viewModelFactory.makeSearchViewModel(
+            searchText: searchController.searchBar.rx.text.orEmpty.asDriver(),
+            searchButtonPressed: searchController.searchBar.rx.searchButtonClicked.asSignal()
+        )
         super.init(nibName: String(describing: SearchViewController.self), bundle: .main)
 
         title = "Search"
@@ -45,14 +48,6 @@ final class SearchViewController: UIViewController {
         tableView.register(cellType: GIFPreviewTableViewCell.self)
         tableView.estimatedRowHeight = 320
         tableView.rowHeight = UITableViewAutomaticDimension
-
-        searchController.searchBar.rx.text.orEmpty
-            .bind(to: viewModel.searchText)
-            .disposed(by: disposeBag)
-
-        searchController.searchBar.rx.searchButtonClicked
-            .bind(to: viewModel.searchButton)
-            .disposed(by: disposeBag)
 
         viewModel.onError
             .subscribe(onNext: { (error) in

@@ -8,13 +8,27 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 final class TrendingListViewModel {
 
-    let trendingList: Observable<[GIF]>
+    private let loadTrendingListUseCase: LoadTrendingListUseCase
+    lazy var trendingList: Driver<[GIF]> = {
+        loadTrendingListUseCase
+            .loadTrendingList()
+            .asDriver(onErrorRecover: { [weak self] error in
+                self?.error.onNext(error)
+                return Driver.just([])
+            })
+    }()
+
+    private let error: PublishSubject<Error> = PublishSubject()
+    var onError: Observable<Error> {
+        return error.asObservable()
+    }
 
     init(loadTrendingListUseCase: LoadTrendingListUseCase) {
-        trendingList = loadTrendingListUseCase.loadTrendingList()
+        self.loadTrendingListUseCase = loadTrendingListUseCase
     }
 
 }

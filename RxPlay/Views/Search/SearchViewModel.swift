@@ -12,23 +12,31 @@ import RxCocoa
 
 final class SearchViewModel {
 
-    let searchUseCase: SearchUseCase
+    private let searchUseCase: SearchUseCase
+    private let searchText: Driver<String>
+    private let searchButtonPressed: Signal<Void>
 
-    let searchText: BehaviorSubject<String> = BehaviorSubject(value: "")
-    let searchButton: PublishSubject<Void> = PublishSubject()
-    let onError: PublishSubject<Error> = PublishSubject()
+    private let error: PublishSubject<Error> = PublishSubject()
+    var onError: Observable<Error> {
+        return error.asObservable()
+    }
 
     lazy var searchResults: Driver<[GIF]> = {
-        return searchButton
+        return searchButtonPressed
             .withLatestFrom(searchText)
+            .asObservable()
             .flatMapLatest { self.searchUseCase.search(query: $0) }
-            .asDriver(onErrorRecover: { error in
-                self.onError.onNext(error)
+            .asDriver(onErrorRecover: { [weak self] error in
+                self?.error.onNext(error)
                 return Driver.just([])
             })
     }()
 
-    init(searchUseCase: SearchUseCase) {
+    init(searchText: Driver<String>,
+         searchButtonPressed: Signal<Void>,
+         searchUseCase: SearchUseCase) {
+        self.searchText = searchText
+        self.searchButtonPressed = searchButtonPressed
         self.searchUseCase = searchUseCase
     }
 }

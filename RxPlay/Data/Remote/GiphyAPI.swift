@@ -14,7 +14,7 @@ import Alamofire
 class GiphyAPI: RemoteAPI {
 
     private let host: URL = URL(string: "https://api.giphy.com/")!
-    private let apiKey: [String: String] = ["api_key": "8tamH4rtZcex6xCsf3wAktYbtjo2IF4X"]
+    private let apiKey: [String: String] = ["api_key": "8tamH4rtZcex6xCsf3wAktYbtjo2IF4"]
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
