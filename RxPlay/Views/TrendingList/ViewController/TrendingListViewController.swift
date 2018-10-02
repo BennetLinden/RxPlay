@@ -38,7 +38,7 @@ final class TrendingListViewController: UIViewController {
         tableView.estimatedRowHeight = 320
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.dataSource = self
-        
+
         viewModel.trendingList
             .subscribe(onNext: {
                 self.trending = $0
@@ -57,8 +57,9 @@ extension TrendingListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: GIFPreviewTableViewCell.self)
         let gif = trending[indexPath.row]
-        let url = gif.images.downsized.url
-        cell.previewImageView.setGifFromURL(url)
+        if let url = URL(string: gif.images.downsized.url) {
+            cell.previewImageView.setGifFromURL(url)
+        }
         cell.usernameLabel.text = gif.username
         cell.ratingLabel.text = String(format: "Rating: %@", gif.rating)
         return cell

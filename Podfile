@@ -9,7 +9,6 @@ target 'RxPlay' do
     pod 'RxCocoa'
     pod 'Alamofire'
     pod 'RxAlamofire'
-    pod 'PromiseKit'
     pod 'SnapKit', '~> 4.0'
     pod 'Reusable', '~> 4.0'
     pod 'Kingfisher', '~> 4.8'

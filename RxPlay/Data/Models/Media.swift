@@ -9,5 +9,5 @@
 import Foundation
 
 struct Media: Codable, Equatable {
-    var url: URL
+    var url: String
 }

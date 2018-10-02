@@ -8,25 +8,27 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 final class SearchViewModel {
 
-    let disposeBag = DisposeBag()
-    let searchResults: Observable<[GIF]>
+    let searchUseCase: SearchUseCase
 
-    init(searchTextObservable: Observable<String>,
-         searchButtonObservable: Observable<Void>,
-         searchUseCase: SearchUseCase) {
+    let searchText: BehaviorSubject<String> = BehaviorSubject(value: "")
+    let searchButton: PublishSubject<Void> = PublishSubject()
+    let onError: PublishSubject<Error> = PublishSubject()
 
-        searchResults = searchButtonObservable.withLatestFrom(searchTextObservable)
-            .distinctUntilChanged()
-            .flatMapLatest ({ (query: String) -> Observable<[GIF]> in
-                return searchUseCase.search(query: query)
+    lazy var searchResults: Driver<[GIF]> = {
+        return searchButton
+            .withLatestFrom(searchText)
+            .flatMapLatest { self.searchUseCase.search(query: $0) }
+            .asDriver(onErrorRecover: { error in
+                self.onError.onNext(error)
+                return Driver.just([])
             })
-    }
-    
-    
-    func someFunction() {
-        GiphyAPI().request(<#T##route: Route##Route#>)
+    }()
+
+    init(searchUseCase: SearchUseCase) {
+        self.searchUseCase = searchUseCase
     }
 }

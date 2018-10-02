@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 protocol DependencyProvider: TabBarControllerFactory,
     TrendingListViewControllerFactory, TrendingListViewModelFactory,
-    SearchViewControllerFactory, SearchViewModelFactory {
+    SearchViewControllerFactory {
 
     var giphyRepository: GiphyRepository { get }
 
@@ -22,6 +23,5 @@ protocol DependencyProvider: TabBarControllerFactory,
     func makeTrendingListViewModel() -> TrendingListViewModel
 
     func makeSearchViewController() -> UIViewController
-    func makeSearchViewModel(searchTextObservable: Observable<String>,
-                             searchButtonObservable: Observable<Void>) -> SearchViewModel
+    func makeSearchViewModel() -> SearchViewModel
 }

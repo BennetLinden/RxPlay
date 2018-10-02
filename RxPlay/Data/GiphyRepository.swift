@@ -30,6 +30,7 @@ extension GiphyRepository: LoadTrendingListUseCase {
 extension GiphyRepository: SearchUseCase {
 
     func search(query: String) -> Observable<[GIF]> {
+        print("query: \(query)")
         let params: [String: Any] = ["q": query]
         let requestObservable: Single<GIFListResponse> =
             remoteAPI.request(Route(.get, "v1/gifs/search", with: params))

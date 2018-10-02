@@ -8,8 +8,8 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 protocol SearchViewModelFactory {
-    func makeSearchViewModel(searchTextObservable: Observable<String>,
-                             searchButtonObservable: Observable<Void>) -> SearchViewModel
+    func makeSearchViewModel(searchButtonPressed: Driver<Void>) -> SearchViewModel
 }

@@ -1,36 +1,26 @@
 PODS:
   - Alamofire (4.7.3)
-  - Kingfisher (4.8.1)
-  - PromiseKit (6.3.4):
-    - PromiseKit/CorePromise (= 6.3.4)
-    - PromiseKit/Foundation (= 6.3.4)
-    - PromiseKit/UIKit (= 6.3.4)
-  - PromiseKit/CorePromise (6.3.4)
-  - PromiseKit/Foundation (6.3.4):
-    - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.3.4):
-    - PromiseKit/CorePromise
-  - Reusable (4.0.2):
-    - Reusable/Storyboard (= 4.0.2)
-    - Reusable/View (= 4.0.2)
-  - Reusable/Storyboard (4.0.2)
-  - Reusable/View (4.0.2)
-  - RxAlamofire (4.2.0):
-    - RxAlamofire/Core (= 4.2.0)
-  - RxAlamofire/Core (4.2.0):
+  - Kingfisher (4.10.0)
+  - Reusable (4.0.3):
+    - Reusable/Storyboard (= 4.0.3)
+    - Reusable/View (= 4.0.3)
+  - Reusable/Storyboard (4.0.3)
+  - Reusable/View (4.0.3)
+  - RxAlamofire (4.3.0):
+    - RxAlamofire/Core (= 4.3.0)
+  - RxAlamofire/Core (4.3.0):
     - Alamofire (~> 4.5)
     - RxSwift (~> 4)
-  - RxCocoa (4.2.0):
+  - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
-  - RxSwift (4.2.0)
-  - SnapKit (4.0.0)
+  - RxSwift (4.3.1)
+  - SnapKit (4.0.1)
   - SwiftLint (0.27.0)
-  - SwiftyGif (4.1.0)
+  - SwiftyGif (4.2.0)
 
 DEPENDENCIES:
   - Alamofire
   - Kingfisher (~> 4.8)
-  - PromiseKit
   - Reusable (~> 4.0)
   - RxAlamofire
   - RxCocoa
@@ -43,7 +33,6 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
-    - PromiseKit
     - Reusable
     - RxAlamofire
     - RxCocoa
@@ -54,16 +43,15 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
-  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
-  PromiseKit: e1425568123ec844a944c93f2bcb29d511d39cf5
-  Reusable: 584a5629747c52e0f6a77841b400dc2643f6fa0f
-  RxAlamofire: 87a9c588541210cc3e4a1f843ccc3ecf3eb98b31
-  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
-  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
+  Reusable: 12b67a60e1f3e8c523cc910795dab733f58fbc7e
+  RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
+  RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
+  RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
-  SwiftyGif: d36c6dfb52e2ca1e48fe349d225f50ec4123ec85
+  SwiftyGif: a149bf84df23370592f3f075561ae02c8632a314
 
-PODFILE CHECKSUM: 903dcdb028e46b033700f9003f6a8d6240a92d6c
+PODFILE CHECKSUM: e9c5b3bf56ade43e4e2fb09caf0f78a0aee38994
 
 COCOAPODS: 1.5.3

@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				5517B240212205E500BB150B /* Containers */,
-				55665622212B44C2008D162E /* View Mode Factories */,
+				55665622212B44C2008D162E /* View Model Factories */,
 				5517B239212205E500BB150B /* View Controller Factories */,
 			);
 			path = Dependencies;
@@ -331,13 +331,13 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		55665622212B44C2008D162E /* View Mode Factories */ = {
+		55665622212B44C2008D162E /* View Model Factories */ = {
 			isa = PBXGroup;
 			children = (
 				55665623212B44DA008D162E /* SearchViewModelFactory.swift */,
 				55665625212B5DF9008D162E /* TrendingListViewModelFactory.swift */,
 			);
-			path = "View Mode Factories";
+			path = "View Model Factories";
 			sourceTree = "<group>";
 		};
 		C50817A553A40866299EB8B5 /* Pods */ = {
@@ -451,7 +451,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint";
+			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint autocorrect\n${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
 		F0318CC44C279F8CE35FD31B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -462,7 +462,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-RxPlay/Pods-RxPlay-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Reusable/Reusable.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -474,7 +473,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reusable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",

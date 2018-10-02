@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class DependencyContainer: DependencyProvider {
 
@@ -33,14 +34,11 @@ final class DependencyContainer: DependencyProvider {
     }
 
     func makeSearchViewController() -> UIViewController {
-        let searchViewController = SearchViewController(viewModelFactory: self)
+        let searchViewController = SearchViewController(viewModel: makeSearchViewModel())
         return UINavigationController(rootViewController: searchViewController)
     }
 
-    func makeSearchViewModel(searchTextObservable: Observable<String>,
-                             searchButtonObservable: Observable<Void>) -> SearchViewModel {
-        return SearchViewModel(searchTextObservable: searchTextObservable,
-                               searchButtonObservable: searchButtonObservable,
-                               searchUseCase: giphyRepository)
+    func makeSearchViewModel() -> SearchViewModel {
+        return SearchViewModel(searchUseCase: giphyRepository)
     }
 }
