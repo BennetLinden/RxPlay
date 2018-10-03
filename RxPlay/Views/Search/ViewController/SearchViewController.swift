@@ -36,6 +36,8 @@ final class SearchViewController: UIViewController {
         )
         super.init(nibName: String(describing: SearchViewController.self), bundle: .main)
 
+        definesPresentationContext = true
+
         title = "Search"
         tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
     }
@@ -59,7 +61,10 @@ final class SearchViewController: UIViewController {
 
         viewModel.searchResults
             .drive(tableView.rx.items) { (tableView, row, gif) in
-                let cell = tableView.dequeueReusableCell(for: IndexPath(row: row, section: 0), cellType: GIFPreviewTableViewCell.self)
+                let cell = tableView.dequeueReusableCell(
+                    for: IndexPath(row: row, section: 0),
+                    cellType: GIFPreviewTableViewCell.self
+                )
                 let url = URL(string: gif.images.downsized.url)!
                 cell.previewImageView.setGifFromURL(url)
                 cell.usernameLabel.text = gif.username
