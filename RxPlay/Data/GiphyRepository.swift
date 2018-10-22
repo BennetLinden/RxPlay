@@ -34,6 +34,8 @@ extension GiphyRepository: SearchUseCase {
         let params: [String: Any] = ["q": query]
         let requestObservable: Single<GIFListResponse> =
             remoteAPI.request(Route(.get, "v1/gifs/search", with: params))
-        return requestObservable.map({ $0.data }).asObservable()
+        return requestObservable
+            .map({ $0.data })
+            .asObservable()
     }
 }

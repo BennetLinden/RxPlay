@@ -15,3 +15,12 @@ target 'RxPlay' do
     pod 'SwiftyGif'
 
 end
+
+target 'RxPlayTests' do
+  use_frameworks!
+  
+    pod 'RxTest'
+    pod 'RxBlocking'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+end

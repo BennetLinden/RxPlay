@@ -9,6 +9,24 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>RxPlayTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5517B200212204DC00BB150B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>553B8188216CF64700CB2B26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 
 final class TrendingListViewModel {
-    
+
     private let trendingListObservable: Observable<[GIF]>
     var trendingList: Driver<[GIF]> {
         return trendingListObservable
@@ -20,16 +20,16 @@ final class TrendingListViewModel {
                 return Driver.just([])
             })
     }
-    
+
     private let error: PublishSubject<Error> = PublishSubject()
     var onError: Observable<Error> {
         return error.asObservable()
     }
-    
+
     init(loadTrendingListUseCase: LoadTrendingListUseCase) {
         trendingListObservable = loadTrendingListUseCase
             .loadTrendingList()
             .share(replay: 1, scope: .whileConnected)
     }
-    
+
 }

@@ -11,9 +11,13 @@ PODS:
   - RxAlamofire/Core (4.3.0):
     - Alamofire (~> 4.5)
     - RxSwift (~> 4)
+  - RxBlocking (4.3.1):
+    - RxSwift (~> 4.0)
   - RxCocoa (4.3.1):
     - RxSwift (~> 4.0)
   - RxSwift (4.3.1)
+  - RxTest (4.3.1):
+    - RxSwift (~> 4.0)
   - SnapKit (4.0.1)
   - SwiftLint (0.27.0)
   - SwiftyGif (4.2.0)
@@ -23,8 +27,10 @@ DEPENDENCIES:
   - Kingfisher (~> 4.8)
   - Reusable (~> 4.0)
   - RxAlamofire
+  - RxBlocking
   - RxCocoa
   - RxSwift
+  - RxTest
   - SnapKit (~> 4.0)
   - SwiftLint
   - SwiftyGif
@@ -35,8 +41,10 @@ SPEC REPOS:
     - Kingfisher
     - Reusable
     - RxAlamofire
+    - RxBlocking
     - RxCocoa
     - RxSwift
+    - RxTest
     - SnapKit
     - SwiftLint
     - SwiftyGif
@@ -46,12 +54,14 @@ SPEC CHECKSUMS:
   Kingfisher: 43c4b802d8b5256cf1f4379e9cd10b329be6d3e2
   Reusable: 12b67a60e1f3e8c523cc910795dab733f58fbc7e
   RxAlamofire: 09624d0f2d48ed8b686e4eb4cf68e28cbd2df556
+  RxBlocking: 64c051285261ca2339481e91b5f70eb06b03660a
   RxCocoa: 78763c7b07d02455598d9fc3c1ad091a28b73635
   RxSwift: fe0fd770a43acdb7d0a53da411c9b892e69bb6e4
+  RxTest: ea97a208826906f3904c0debdd09575ebcbfe216
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftLint: 3207c1faa2240bf8973b191820a116113cd11073
   SwiftyGif: a149bf84df23370592f3f075561ae02c8632a314
 
-PODFILE CHECKSUM: e9c5b3bf56ade43e4e2fb09caf0f78a0aee38994
+PODFILE CHECKSUM: b2b98afdac682bfd2129ec66a28ef819a5e5bf10
 
 COCOAPODS: 1.5.3

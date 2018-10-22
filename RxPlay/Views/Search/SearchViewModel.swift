@@ -23,7 +23,7 @@ final class SearchViewModel {
 
     private let error: PublishSubject<Error> = PublishSubject()
     var onError: Observable<Error> {
-        return error.asObservable()
+        return error
     }
 
     init(searchText: Driver<String>,
